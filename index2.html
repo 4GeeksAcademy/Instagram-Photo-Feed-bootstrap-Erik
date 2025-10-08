@@ -4,8 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Feed</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-    
+<body d-flex>
+    <div class="main-container">
+    <!-- NAVBAR --> 
+        <nav>
+            <div class="nav-main-container bg-body-secondary py-2 d-flex gap-1 justify-content-between">
+                <!--Nav left side-->
+                <div class="nav-left-side ms-2">
+                    <span class="instagram-icon m-l fw-bold"><i class="fa-brands fa-instagram fa-lg"></i></span>
+                     <span class="instagram-title fw-bold">Instagram</span>
+                </div>
+                <!--Nav right side-->
+                <div class="nav-right-side d-flex gap-2 justify-content-center me-2">
+                    <span>
+                        <button class="post bg-success rounded text-light fs-6 btn btn-sm px-2 py-0 mt-1" data-bs-toggle="modal" data-bs-target="#createPostModal"><small>Create a new post</small></button>
+                    </span>
+                    <span>
+                        <div class="dropdown">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                            <li><a class="dropdown-item" href="#"></a><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                         </div>
+                     </span>
+                </div>
+            </div>
+        </nav>
+    <!--NAVBAR end-->
+
+    <!--View switcher-->
+    <div class="grid-changers d-flex justify-content-center gap-4 mt-2">
+        <span class="grid">
+          <a class="text-decoration-none" href="index.html"><i class="fa-solid fa-table-cells" style="color: gray;"></i></a>
+        </span>
+        <span class="single">
+          <i class="fa-solid fa-square" style="color: #3845c6;"></i>
+        </span>
+    </div>
+    <!--View switcher end-->
+
+    <!--Main section-->
+    <main>
+          <div class="container my-4">
+            <div class="single-picture-container row justify-content-center">
+              <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                <!--first card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>09/17</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/1/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>238 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--first card end-->
+                <!--second card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>09/29</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/2/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>23 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--second card end-->
+                <!--third card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>05/15</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/3/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>36 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--third card end-->
+                <!--fourth card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>01/05</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/4/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>52 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum doloramet consectetur, adipisicing elit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--fourth card end-->
+                <!--fifth card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>03/13</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/5/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>11 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--fifth card end-->
+                <!--sixth card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>09/22</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/6/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>873 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--sixth card end-->
+                <!--seventh card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>08/22</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/7/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>69 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci nemo tenetur, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--seventh card end-->
+                <!--eighth card-->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>10/13</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/8/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>4 Likes</strong></p>
+                  <p class="card-text">Lorem ipelit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--eighth card end-->
+                <!--ninth -->
+                <div class="card border-1px p-3 mb-4">
+                  <div class="card-header-container">
+                    <div class="header-text d-flex justify-content-between align-items-center">
+                      <h5 class="card-title">Lorem ipsum dolor sit.</h5>
+                      <small>02/28</small>
+                    </div>
+                  </div>
+                  <img class="card-img-top" src="https://picsum.photos/seed/9/00" alt="Card image cap">
+                  <div class="card-body">
+                  <p class="card-text"><strong>24 Likes</strong></p>
+                  <p class="card-text">Lorem ipsum dol adipisicing elit. Adipisci nemo tenetur velit, laudantium omnis nihil?</p>
+                  </div>
+                </div>
+                <!--ninth card end-->
+            </div>
+          </div>
+   </main>
+
+<!--Main section end-->
+
+
+ <!--Modal-->
+ <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="createPostLabel">Create a new post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Caption:</label>
+            <textarea class="form-control" rows="3" placeholder="Add the caption of your post here"></textarea>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-camera"></i></button>
+            <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-location-dot"></i></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Publish</button>
+      </div>
+
+    </div>
+  </div>
+    </div>
+  <!--Modal end-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
